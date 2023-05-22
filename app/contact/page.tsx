@@ -1,11 +1,9 @@
 // export default function Contact() {
 function Contact() {
     return (
-        <main>
+        <main className="mt-6">
             <h1 className="text-2xl font-semibold">Contact page</h1>
-            <div>
-                <p>To reach me just write an e-mail.</p>
-            </div>
+            <p className="mt-5">To reach me just write an e-mail.</p>
         </main>
     );
 }
