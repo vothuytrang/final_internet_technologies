@@ -1,11 +1,13 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
-// GET http://localhost:3000/api
-export function GET(_request: Request) {
-    NextResponse.json({ msg: 'OK!' })
+
+export async function GET(request: NextRequest) {
+    // console.log('Request: ', request);
+    return NextResponse.json({ status: 'ok' })
 }
 
-// POST http://localhost:3000/api
-export async function POST(request: Request, response: Response) {
-    NextResponse.json({ msg: 'success!' });
+export async function POST(request: Request) {
+    const responseData = await request.json();
+    console.log(responseData);
+    return NextResponse.json(responseData);
 }
