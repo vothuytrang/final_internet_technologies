@@ -43,7 +43,8 @@ function Movies() {
     return (
         <main className="mt-6">
             <Header>Movies</Header>
-            {isError && <p>Error!</p>}
+            {/* {isError && <p>Error!</p>} */}
+            {isError ? <p>Error!</p> : null}
             {isLoading && <p>Loading...</p>}
             <div>
                 {movies && movies.map((elem) => {
