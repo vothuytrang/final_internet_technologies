@@ -1,4 +1,6 @@
-import { useState } from 'react';
+"use client";
+
+import { useState, useEffect } from 'react';
 import { Header } from '../../components/Header';
 
 const mockMovies = [{
@@ -13,21 +15,40 @@ const mockMovies = [{
 
 interface Movie {
     id: string;
-    title: string;
-    category_name: string;
+    fields: {
+        title: string;
+        category_name: string;
+    }
 }
 
 function Movies() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [isError, setIsError] = useState(false);
     const [movies, setMovies] = useState<Movie[] | null>(null);
+
+    useEffect(() => {
+        fetch('/movies/api')
+        .then(response => response.json())
+        .then(data => {
+            setMovies(data);
+        })
+        .catch(() => {
+            setIsError(true);
+        })
+        .finally(() => {
+            setIsLoading(false);
+        })
+    }, []);
 
     return (
         <main className="mt-6">
             <Header>Movies</Header>
-            <p className="mt-5">Movies list</p>
+            {isError && <p>Error!</p>}
+            {isLoading && <p>Loading...</p>}
             <div>
                 {movies && movies.map((elem) => {
                     return (
-                        <div key={elem.id}>{elem.title} ({elem.category_name})</div>
+                        <div key={elem.id}>{elem.fields.title} ({elem.fields.category_name})</div>
                     )
                 })}
             </div>
