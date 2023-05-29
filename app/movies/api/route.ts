@@ -5,6 +5,9 @@ export async function GET() {
         headers: {
             Authorization: `Bearer ${process.env.AIRTABLE_API_TOKEN}`,
         },
+        next: {
+            revalidate: 10,
+        }
     });
     const data = await response.json();
 
