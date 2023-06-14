@@ -1,0 +1,43 @@
+.header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.picture_published_date {
+    margin-bottom: 40px;
+}
+
+.picture_img {
+    border-radius: 10px;
+}
+
+.picture_name {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.picture_author {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.picture_category {
+    font-weight: bold;
+}
+
+.picture_published_date {
+    font-weight: 200;
+    font-size: 14px;
+}

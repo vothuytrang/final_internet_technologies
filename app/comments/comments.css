@@ -1,0 +1,49 @@
+.header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.comment-list {
+    margin: auto;
+}
+
+.comment {
+    margin-left: 300px;
+    margin-bottom: 20px;
+}
+.comment-content {
+    font-size: 20px;
+}
+
+.comment-status {
+    font-size: 14px;
+    font-weight: 400;
+    color: #55b991;
+}
+
+.comment-time {
+    font-weight: 200;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.write-comment {
+    margin-left: 300px;
+}
+
+.write-comment textarea {
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.write-comment input {
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}

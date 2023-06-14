@@ -6,7 +6,7 @@ export default function About() {
             <div>
                 {/* <h1 className="text-2xl font-semibold">About</h1> */}
                 <Header>About</Header>
-                <p className="mt-5">Lorem ipsum....</p>
+                <p className="mt-5">THIS IS THE ABOUT PAGE</p>
             </div>
         </main>
     );

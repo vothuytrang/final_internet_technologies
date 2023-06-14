@@ -2,7 +2,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 
 export async function GET() {
-    const response = await fetch('https://api.airtable.com/v0/appBDIWPFLg0qOQIl/comments', {
+    const response = await fetch('https://api.airtable.com/v0/appuCYu7mTj0F3vQD/comments', {
         headers: {
             Authorization: `Bearer ${process.env.AIRTABLE_API_TOKEN}`,
         },
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     const responseData = await request.json();
     console.log('Plain data: ', responseData);
 
-    const response = await fetch('https://api.airtable.com/v0/appBDIWPFLg0qOQIl/comments', {
+    const response = await fetch('https://api.airtable.com/v0/appuCYu7mTj0F3vQD/comments', {
         headers: {
             Authorization: `Bearer ${process.env.AIRTABLE_API_TOKEN}`,
             'Content-Type': 'application/json',

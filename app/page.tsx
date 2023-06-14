@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main>
-      <h1>Home</h1>
+      <h1>THIS IS THE HOME PAGE</h1>
     </main>
   )
 }

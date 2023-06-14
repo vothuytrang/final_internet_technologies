@@ -25,3 +25,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 300px;
+  font-weight: 600;
+  font-size: 24px;
+  background-color: beige;
+  padding: 0 20px;
+  border-radius: 20px;
+}
+
+.list-inside {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+}
